@@ -1,43 +1,22 @@
+import Countdown from 'react-countdown';
+import Container from '@mui/material/Container';
+import { Typography } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
+
 export default function Root() {
     return (
-      <>
-        <div id="sidebar">
-          <h1>React Router Contacts</h1>
-          <div>
-            <form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div
-                id="search-spinner"
-                aria-hidden
-                hidden={true}
-              />
-              <div
-                className="sr-only"
-                aria-live="polite"
-              ></div>
-            </form>
-            <form method="post">
-              <button type="submit">New</button>
-            </form>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href={`/settime`}>set time</a>
-              </li>
-              <li>
-                <a href={`/contacts/2`}>Your Friend</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div id="detail"></div>
-      </>
+      <Container id="countdown">
+        <Grid 
+          container 
+          direction="column"
+          alignItems="center"
+          justifyContent="center"
+          sx={{ minHeight: '100vh' }}
+          >
+          <Typography variant='h1' component="h1" align='center'>
+            <Countdown date={new Date("2023-11-09T18:00:00")} />
+          </Typography>
+        </Grid>
+      </Container>
     );
   }
