@@ -14,7 +14,8 @@ export default function Root() {
           sx={{ minHeight: '100vh' }}
           >
           <Typography variant='h1' component="h1" align='center'>
-            <Countdown date={new Date("2023-11-09T18:00:00")} />
+            {/* <Countdown date={new Date("2023-11-09T18:00:00")} /> */}
+            Maciej to gej.
           </Typography>
         </Grid>
       </Container>
